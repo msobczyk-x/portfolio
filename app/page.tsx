@@ -4,17 +4,18 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 export default function Home() {
   return (
-<main className="flex bg-primary w-full flex-row justify-between text-textColor">
-  <div className="m-24 flex w-full flex-row gap-48">
-
+    
+      <main className="flex justify-between gap-48 bg-primary text-textColor">
+        
+        <Header />
+        
+    
+        <div className="flex flex-col p-24">
+          <About />
+          <Projects />
+          <Experience />
+        </div>
+      </main>
   
-  <Header />
-    <div className="flex flex-col">
-    <About />
-    <Projects />
-    <Experience />
-    </div>
-    </div>
-</main>
-  )
+  );
 }
