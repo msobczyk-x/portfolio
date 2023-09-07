@@ -1,34 +1,62 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 
 export default function Terminal() {
   return (
-    <div className="flex flex-col justify-center items-center h-[calc(100vh_-_9rem)]">
+    <motion.div
+    initial={{ opacity: 0, x: 100}}
+    whileInView={{ opacity: 1, x: 0}}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true, amount: 0.5 }}
+      className="flex flex-col justify-center items-center h-[calc(100vh_-_9rem)] text-secondary"
+      id="about"
+    >
       <div className="flex flex-col justify-center items-center bg-secondary rounded-lg pt-7 p-2 relative w-3/4 h-2/4">
         <div className="flex flex-row justify-center items-center gap-2 absolute top-2 left-3">
           <div className="rounded-full w-3 h-3 bg-red-500"></div>
           <div className="rounded-full w-3 h-3 bg-yellow-500"></div>
           <div className="rounded-full w-3 h-3 bg-green-500"></div>
         </div>
-        <div className="bg-primary w-full h-full rounded-lg relative">
-            <div className="w-full border-t-2 border-cyan-600 absolute bottom-0">
-                <p className="p-1">
-                    <span className="text-cyan-600">maciej</span>@<span className="text-cyan-600">sobczyk</span>:<span className="text-cyan-600">~</span>$ <motion.span
-                
-                    animate={{ opacity: [0,1,0] }}
-                   transition={{
-                    duration:2,
-                    ease: "easeIn",
-                    repeat: Infinity,
-                   }}
-
-                    >|</motion.span>
-
-                </p>
+        <div className="bg-primary w-full h-full rounded-lg relative flex flex-col p-2">
+          <div className="flex flex-row items-center gap-2">
+            <span className="text-green-500 text-sm">
+              ➜<span className="text-cyan-600"> ~</span> cat about.md
+            </span>
+          </div>
+          <div className="flex flex-col gap-2 p-2">
+            <p className="text-sm">
+              ## <span className="text-cyan-600 uppercase">About me</span>
+            </p>
+            <p className="text-sm">
+              
+              {`As a university student, I am an ambitious and passionate individual eager to apply my knowledge in software development and actively seeking a position in web development. Ever since a young age, I have been captivated by all things related to IT. Now, I am pursuing my lifelong dream of becoming a software engineer.`}
+            </p>
+            <p className="text-sm">
+              {`I'm looking for a job as a web developer (junior/intern level). If you're
+              interested in hiring me, please contact me via email.`}
+            </p>
             </div>
-
+          <div className="w-full absolute bottom-0">
+            <p className="pb-1">
+              <span className="text-green-500">
+                ➜<span className="text-cyan-600"> ~ </span>
+              </span>
+              <motion.span
+                animate={{ opacity: [1,1,0,0] }}
+                transition={{
+                  duration: 2,
+                  ease: 0,
+                  repeat: Infinity,
+                  type: "tween",
+                }}
+                className="text-textColor"
+              >
+                |
+              </motion.span>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 export default function About() {
     return (
-        <motion.div className="h-screen pt-12 snap-proximity snap-start snap-always" id="about"
+        <motion.div className="pt-12 snap-proximity snap-start snap-always" id="about"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
