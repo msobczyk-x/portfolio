@@ -1,14 +1,37 @@
 "use client"
 import { motion } from "framer-motion";
+import ExperienceCard from "./ExperienceCard";
 export default function Experience() {
+    const experience = [
+        {
+            title: "Zespół Szkół im. Marii Curie Skłodowskiej w Kętrzynie",
+            description: "IT Technician",
+            date: "2016 - 2020"
+        },
+        {
+            title: "University of Gdańsk",
+            description: "Computer Science, BSc",
+            date: "2020 - 2023"
+        }
+
+    ];
     return (
-        <motion.div className="h-screen pt-12 snap-start snap-always" id="experience"
+        <motion.div className="pt-12 snap-start snap-always flex flex-col gap-2 text-secondary " id="education"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{once: true, amount: 0.5}}
         >
-            <h2 className="uppercase">Experience</h2>
+            <h2 className="uppercase text-xl font-semibold text-textColor">Education</h2>
+
+            <motion.div>
+                <ul className="flex flex-col">
+                    {(experience.map((experience, index) => (
+                        <ExperienceCard key={index} title={experience.title} description={experience.description} date={experience.date} />
+                    )))
+                    }
+                </ul>
+            </motion.div>
         </motion.div>
     )
 }

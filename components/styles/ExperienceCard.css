@@ -1,0 +1,13 @@
+
+.experienceCard::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: #8D99AE;
+    border-radius: 100%;
+    z-index: 10;
+}
+

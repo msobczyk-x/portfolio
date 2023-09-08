@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import "./styles/Header.css";
+import Socials from "./Socials";
 type HeaderProps = {
   targetIds: string[];
 };
@@ -76,6 +77,7 @@ export default function Header({ targetIds }: HeaderProps) {
           </ul>
         </nav>
       </div>
+      <Socials />
     </motion.header>
   );
 }

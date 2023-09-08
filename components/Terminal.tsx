@@ -6,12 +6,17 @@ export default function Terminal() {
     <motion.div
     initial={{ opacity: 0, x: 100}}
     whileInView={{ opacity: 1, x: 0}}
-    transition={{ duration: 0.5 }}
+    transition={{ duration: 0.5,
+    type: "tween",
+    ease: "easeInOut",
+    }}
     viewport={{ once: true, amount: 0.5 }}
-      className="flex flex-col justify-center items-center h-[calc(100vh_-_9rem)] text-secondary"
+
+    
+      className="flex flex-col justify-center items-center h-[calc(100vh_-_10rem)] text-secondary mb-12"
       id="about"
     >
-      <div className="flex flex-col justify-center items-center bg-secondary rounded-lg pt-7 p-2 relative w-3/4 h-2/4">
+      <div className="flex flex-col justify-center items-center bg-secondary rounded-lg pt-7 p-2 relative w-3/4 h-[25rem] backdrop-blur-lg shadow-md">
         <div className="flex flex-row justify-center items-center gap-2 absolute top-2 left-3">
           <div className="rounded-full w-3 h-3 bg-red-500"></div>
           <div className="rounded-full w-3 h-3 bg-yellow-500"></div>
