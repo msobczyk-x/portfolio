@@ -20,8 +20,6 @@ export default function Header({ targetIds }: HeaderProps) {
         const element = document.getElementById(id);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          console.log(id)
-          console.log(offsetTop, offsetHeight, scrollY);
           if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
             setActiveId(id);
             foundActive = true;
@@ -66,7 +64,7 @@ export default function Header({ targetIds }: HeaderProps) {
               <li key={id}>
                 <a
                   href={`#${id}`}
-                  className={`uppercase anchor ${
+                  className={`uppercase anchor hover:text-accent ${
                     activeId === id ? "active" : ""
                   }`}
                 >

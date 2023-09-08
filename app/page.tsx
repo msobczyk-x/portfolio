@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         
       </main>
-   <Contact /> 
+{/*    <Contact />  */}
       </div>
   
   );

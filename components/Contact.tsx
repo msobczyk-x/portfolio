@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 export default function Contact() {
     return (
         <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0}}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{once: true, amount: 0.5}}
-        className="w-full h-screen"
+        className="w-full h-[50vh] flex flex-row"
         >
+            <div className="w-1/2 bg-slate-700">
+
+            </div>
+<div className="w-1/2 bg-primary"></div>
         </motion.div>
     )
 }
