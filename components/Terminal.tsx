@@ -50,7 +50,7 @@ export default function Terminal() {
                 animate={{ opacity: [1,1,0,0] }}
                 transition={{
                   duration: 2,
-                  ease: 0,
+                  ease: "easeIn",
                   repeat: Infinity,
                   type: "tween",
                 }}
