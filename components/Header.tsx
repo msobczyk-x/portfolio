@@ -27,7 +27,10 @@ export default function Header({ targetIds }: HeaderProps) {
           }
         }
       }
-
+      if (scrollY + window.innerHeight >= document.body.scrollHeight) {
+        setActiveId(targetIds[targetIds.length - 1]);
+        foundActive = true;
+      }
       if (!foundActive) {
         setActiveId(null);
       }
@@ -64,6 +67,16 @@ export default function Header({ targetIds }: HeaderProps) {
               <li key={id}>
                 <a
                   href={`#${id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (id === "about") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      return;
+                    }
+                    document.getElementById(id)?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
                   className={`uppercase anchor hover:text-accent ${
                     activeId === id ? "active" : ""
                   }`}

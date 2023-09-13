@@ -35,7 +35,7 @@ export default function ProjectCard(cardData: ProjectCardProps) {
                 {cardData.technologies.map((technology) => (
                     <div key={technology} className='bg-slate-700  rounded-xl p-1  font-light  group-hover:bg-slate-500  '>
 
-                    <span  className="text-textColor  text-sm ">{technology}</span>
+                    <span  className="text-textColor  text-sm px-2">{technology}</span>
                     </div>
                 ))}
             </div>
