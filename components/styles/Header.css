@@ -26,3 +26,9 @@
 .anchor {
     transition: all 0.3s ease-in-out;
 }
+
+.social-icon:hover {
+    filter: invert(67%) sepia(51%) saturate(1419%) hue-rotate(344deg) brightness(101%) contrast(101%);
+
+
+}

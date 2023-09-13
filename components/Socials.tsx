@@ -21,14 +21,14 @@ export default function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={LinkedInIcon} alt="LinkedIn" width={22} height={22}></Image>
+        <Image src={LinkedInIcon} alt="LinkedIn" width={22} height={22} className="social-icon"></Image>
       </a>
       <a
         href="https://www.github.com/msobczyk-x"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={GithubLogo} alt="Github" width={24} height={24}></Image>
+        <Image src={GithubLogo} alt="Github" width={24} height={24} className="social-icon"></Image>
 
       </a>
       <a onClick={()=> {
@@ -37,7 +37,7 @@ export default function Socials() {
       }}
       className="cursor-pointer relative"
       >
-      <Image src={EmailIcon} alt="Email" width={28} height={28} ></Image>
+      <Image src={EmailIcon} alt="Email" width={28} height={28} className="social-icon" ></Image>
       {isCopied &&
       <div className="absolute bg-slate-500 w-48 flex text-xs items-center justify-center p-1 rounded -left-20">
           <p>Email saved to clipboard!</p>
