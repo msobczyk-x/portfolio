@@ -14,7 +14,7 @@ export default function Home() {
   const targetIds = ["about", "projects", "education"];
   return (
       <div className="bg-primary text-textColor flex flex-col items-center justify-center w-screen">
-      <main className="flex justify-between gap-24 max-w-7xl flex-col md:flex-row">
+      <main className="flex justify-between gap-12 md:gap-24 max-w-7xl flex-col md:flex-row">
         {
           //if breakpoint is is larger than 900px then render the header
           //otherwise render the header in the mobile menu
