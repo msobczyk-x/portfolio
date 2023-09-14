@@ -7,23 +7,9 @@ import Terminal from "@/components/Terminal";
 import Contact from "@/components/Contact";
 import { useEffect, useState } from "react";
 import HeaderMobile from "@/components/HeaderMobile";
+import useDeviceSize from "@/components/useDeviceSize";
 export default function Home() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    // Function to update the window width state
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Attach the event listener when the component mounts
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const [width, height] = useDeviceSize();
 
   const targetIds = ["about", "projects", "education"];
   return (
@@ -32,7 +18,7 @@ export default function Home() {
         {
           //if breakpoint is is larger than 900px then render the header
           //otherwise render the header in the mobile menu
-          (windowWidth >= 900 ? (
+          (width >= 900 ? (
             <Header targetIds={targetIds} />
           )
             : (
