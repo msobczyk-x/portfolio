@@ -27,7 +27,7 @@ export default function ProjectCard(cardData: ProjectCardProps) {
             
 <h3 className="text-secondary font-semibold uppercase  group-hover:text-textColor group-hover:after:content-['↗'] group-hover:after:ml-2 ">{cardData.title}</h3>
         <div className="flex flex-row gap-2 ">
-            <Image src={cardData.image} alt={cardData.title} className='w-1/4 h-32 max-w-64 '></Image>
+            <img src={cardData.image} alt={cardData.title} className='w-1/4 h-32 max-w-64 '></img>
             <div className='flex flex-col gap-2 justify-center'>
             
             <p className="text-secondary group-hover:text-textColor text-md">{cardData.description}</p>
