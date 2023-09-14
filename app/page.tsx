@@ -5,17 +5,47 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Terminal from "@/components/Terminal";
 import Contact from "@/components/Contact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import HeaderMobile from "@/components/HeaderMobile";
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update the window width state
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const targetIds = ["about", "projects", "education"];
   return (
-      <div className="bg-primary text-textColor flex w-full flex-col items-center justify-center">
-      <main className="flex justify-between gap-24 max-w-7xl">
+      <div className="bg-primary text-textColor flex flex-col items-center justify-center w-screen">
+      <main className="flex justify-between gap-24 max-w-7xl flex-col md:flex-row">
+        {
+          //if breakpoint is is larger than 900px then render the header
+          //otherwise render the header in the mobile menu
+          (windowWidth >= 900 ? (
+            <Header targetIds={targetIds} />
+          )
+            : (
+              <HeaderMobile targetIds={targetIds} />
+            )
+          )
+
+
+        }
         
-        <Header targetIds={targetIds}/>
         
     
-        <div className="flex flex-col p-24 w-2/3 snap-y snap-mandatory snap gap-12">
+        <div className="flex flex-col p-8 md:p-24 snap-y snap-mandatory snap md:gap-12">
           <Terminal/>
           <Projects />
           <Experience />

@@ -12,13 +12,18 @@ export default function Experience() {
             title: "University of Gdańsk",
             description: "Computer Science, BSc",
             date: "2020 - 2023"
+        },
+        {
+            title: "University of Gdańsk",
+            description: "Computer Science, MSc",
+            date: "2023 - present"
         }
 
     ];
     return (
         <motion.div className="pt-12 snap-start snap-always flex flex-col gap-2 text-secondary " id="education"
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0}}
+        whileInView={{ opacity: 1}}
         transition={{ duration: 0.5 }}
         viewport={{once: true, amount: 0.5}}
         >

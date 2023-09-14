@@ -1,14 +1,13 @@
 "use client"
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import SnakeImage from "../public/snake.png";
 
 export default function Projects() {
     const projects = [
         {
             title: "Tripsync",
             description: "TripSync is a mobile application designed to streamline and enhance the organization and management of school trips, providing features such as real-time student location tracking and instant alerts for teachers in case of student separation.",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://github.com/msobczyk-x/TripSync",
             github: "",
             technologies: ["React Native","Typescript", "Socket.Io", "Express.js", "MongoDB", "Google Maps API"]
@@ -16,7 +15,7 @@ export default function Projects() {
         {
             title: "Vibe",
             description: "Vibe is a university group project where we developed a chatting application that utilizes hobby-based matching. Our aim was to create an interactive platform that connects individuals based on their shared interests. I was in charge of the frontend part. ",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://github.com/msobczyk-x/chat-app",
             github: "",
             technologies: ["React.js","Typescript", "TailwindCSS", "Socket.Io", "Express.js", "MongoDB"]
@@ -24,7 +23,7 @@ export default function Projects() {
         {
             title: "Car rental fullstack website",
             description: "It features an intuitive interface for customers to browse and reserve vehicles, along with a robust back-end infrastructure for managing car information, user data, reservations.",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://github.com/msobczyk-x/car-rental-fullstack",
             github: "",
             technologies: ["React.js","Javascript", "Django", "PostgreSQL", "Python"]
@@ -32,7 +31,7 @@ export default function Projects() {
         {
             title: "Tunemate",
             description: "Tunemate is a music application that is designed to replicate the features and functionality of the popular music streaming service, Spotify. This project utilizes the Spotify API to fetch data and play music.",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://github.com/msobczyk-x/music-app",
             github: "",
             technologies: ["React.js","Typescript", "Spotify API", "TailwindCSS", "Firebase", "Sass","React Redux"]
@@ -40,7 +39,7 @@ export default function Projects() {
         {
             title: "Google Chrome Dino Game",
             description: "Popular Dinogame recreated in Go using the Ebiten library.",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://github.com/msobczyk-x/dinogame",
             github: "",
             technologies: ["Go","Ebiten"]
@@ -48,7 +47,7 @@ export default function Projects() {
         {
             title: "Snake game",
             description: "Snake game created with React and Typescript.",
-            image: SnakeImage,
+            image: "./snake.png",
             link: "https://msobczyk-x.github.io/snake-game/build/",
             github: "",
             technologies: ["React.js","Typescript", "TailwindCSS"]
@@ -61,8 +60,8 @@ export default function Projects() {
      
         >
             <motion.h2 className="uppercase text-xl font-semibold"
-               initial={{ opacity: 0, x: 100 }}
-               whileInView={{ opacity: 1, x: 0 }}
+               initial={{ opacity: 0}}
+               whileInView={{ opacity: 1}}
                transition={{ duration: 0.5 }}
                viewport={{once: true, amount: 0.5}}
             >Projects</motion.h2>

@@ -51,7 +51,7 @@ export default function Header({ targetIds }: HeaderProps) {
       initial={{ opacity: 0, x:-100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: "some" }}
     >
       <div className="flex flex-col gap-4">
         <h1 className="text-6xl font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
