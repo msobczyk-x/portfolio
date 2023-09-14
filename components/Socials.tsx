@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
-import GithubLogo from "../assets/githubico.svg";
-import LinkedInIcon from "../assets/linkedinicon.svg";
-import EmailIcon from "../assets/emailico.svg";
+import GithubLogo from "../public/githubico.svg";
+import LinkedInIcon from "../public/linkedinicon.svg";
+import EmailIcon from "../public/emailico.svg";
 import { useEffect, useState } from "react";
 export default function Socials() {
   const [isCopied, setIsCopied] = useState(false);

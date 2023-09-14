@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import SnakeImage from "../assets/snake.png";
+import SnakeImage from "../public/snake.png";
 
 export default function Projects() {
     const projects = [

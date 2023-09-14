@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image';
-import GithubLogo from '../assets/github-mark-white.svg';
 import { motion } from "framer-motion";
 type ProjectCardProps = {
+
     title: string;
     description: string;
     image: string | any;
@@ -15,10 +15,10 @@ export default function ProjectCard(cardData: ProjectCardProps) {
 
     return ( 
         <motion.div className='flex flex-col justify-center hover:bg-slate-700 hover:scale-105 hover:backdrop-blur-xl transition-all px-1 rounded group cursor-pointer select-none min-h-32 hover:shadow-md'
-        initial={{ opacity: 0, y: 100}}
-        whileInView={{ opacity: 1, y: 0}}
-        transition={{ duration: 0.2, ease: "easeIn" }}
-        viewport={{ once: true, amount: "all" }}
+        initial={{  y: 100}}
+        whileInView={{ y: 0}}
+        transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut"}}
+        viewport={{ once: true, amount: "some"}}
         onClick={() => {
             window.open(cardData.link, "_blank");
         }
