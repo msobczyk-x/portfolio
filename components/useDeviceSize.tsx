@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 const useDeviceSize = () => {
 
     const [width, setWidth] = useState(0)
@@ -10,7 +10,7 @@ const useDeviceSize = () => {
       setHeight(window.innerHeight);
     }
   
-    useEffect(() => {
+    useLayoutEffect(() => {
       // component is mounted and window is available
       handleWindowResize();
       window.addEventListener('resize', handleWindowResize);
